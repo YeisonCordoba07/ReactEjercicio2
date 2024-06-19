@@ -1,7 +1,5 @@
 const apiKey = process.env.REACT_APP_GIPHY_API_KEY;
 
-console.log('API Key:', process.env.REACT_APP_GIPHY_API_KEY);
-
 export default function getGifs(search = "cat") {
     const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=25&offset=0&rating=g&lang=es&bundle=messaging_non_clips`;
 
@@ -10,8 +8,6 @@ export default function getGifs(search = "cat") {
         .then(res => res.json())
         .then(response => {
             const { data } = response;
-            const gifs = data.map(i => i.url);
-            console.log(gifs);
             return data;
         })
     );

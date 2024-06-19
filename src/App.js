@@ -9,20 +9,20 @@ function App() {
         <div className="App">
             <section className="App-content">
                 <h1>Inicio</h1>
-                <Link to={"/gif/panda"}>
+                <Link to={"/search/panda"}>
                     Pandas
                 </Link>
 
-                <Link to={"/gif/cat"}>
+                <Link to={"/search/cat"}>
                     Cats
                 </Link>
 
-                <Link to={"/gif/dog"}>
+                <Link to={"/search/dog"}>
                     Dogs
                 </Link>
 
             <Route component={ListOfGifs}
-            path={"/gif/:search"}/>
+            path={"/search/:search"}/>
 
             </section>
         </div>
