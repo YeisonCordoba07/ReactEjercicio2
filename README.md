@@ -1,3 +1,9 @@
+# Resultado
+
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/334a8d9f-6cdb-45c7-84f5-8c7ac6af1cac)
+
+-----
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
