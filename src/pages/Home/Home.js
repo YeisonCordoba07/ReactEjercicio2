@@ -7,7 +7,7 @@ export default function Home() {
     const [search, setSearch] = useState("");
     const [path, setPath] = useLocation();
 
-    const {loading, gifs} = useGifs({search});
+    const {gifs} = useGifs();
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -21,21 +21,13 @@ export default function Home() {
     };
 
 
-    if(loading){
-        return(
-            <div>
-                <p>Loading ...</p>
-            </div>
-        );
-    }
-
     return (
         <>
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text" 
                 value={search} 
-
+                onChange={handleChange}
                 />
             </form>
 
@@ -43,7 +35,7 @@ export default function Home() {
             <Link to={"/search/cat"}>Cats</Link>
             <Link to={"/search/dog"}>Dogs</Link>
 
-            <ListOfGifs params={gifs}/>
+            <ListOfGifs gifs={gifs}/>
         </>
     );
 }

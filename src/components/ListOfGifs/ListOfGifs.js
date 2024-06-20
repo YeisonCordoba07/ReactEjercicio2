@@ -2,21 +2,8 @@ import React from "react";
 import Gif from "../Gif/Gif";
 import "./ListOfGifs.css";
 
-import { useGifs } from "../../hook/useGifs";
 
-function ListOfGifs({ params }) {
-
-    const { search } = params;
-    const {loading, gifs} = useGifs({search});
-    console.log("ListOfGifs");
-
-    if(loading){
-        return(
-            <div>
-                <p>Loading ...</p>
-            </div>
-        );
-    }
+export default function ListOfGifs({ gifs }) {
 
     return (
         <div className="listOfGifs">
@@ -33,5 +20,3 @@ function ListOfGifs({ params }) {
         </div>
     );
 }
-
-export default React.memo(ListOfGifs);
