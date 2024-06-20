@@ -3,21 +3,12 @@ import Gif from "../Gif/Gif";
 import getGifs from "../../service/getGifs";
 import "./ListOfGifs.css";
 
-export default function ListOfGifs({ params }) {
-    const [gifs, setGifs] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const { search } = params;
+import { useGifs } from "../../hook/useGifs";
 
-    useEffect(
-        function () {
-            setLoading(true);
-            getGifs(search).then((gif) => {
-                setGifs(gif);
-                setLoading(false);
-            });
-        },
-        [search]
-    );
+export default function ListOfGifs({ params }) {
+
+    const { search } = params;
+    const {loading, gifs} = useGifs({search});
 
     if(loading){
         return(
