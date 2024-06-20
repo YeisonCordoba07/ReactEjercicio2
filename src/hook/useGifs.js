@@ -10,6 +10,7 @@ export function useGifs({search}= {search: null}){
         function () {
             setLoading(true);
             const auxSearch = search || localStorage.getItem("lastSearch");
+            
             getGifs({search: auxSearch}).then((gif) => {
                 setGifs(gif);
                 setLoading(false);
