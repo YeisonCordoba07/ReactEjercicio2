@@ -1,28 +1,24 @@
 import "./App.css";
 import React from "react";
 import { Link, Route } from "wouter";
-import ListOfGifs from "./components/ListOfGifs";
+import ListOfGifs from "./components/ListOfGifs/ListOfGifs";
+import Home from "./pages/Home/Home";
 
 function App() {
-   
+
     return (
         <div className="App">
             <section className="App-content">
-                <h1>Inicio</h1>
-                <Link to={"/search/panda"}>
-                    Pandas
+
+                <Link to={"/"}>
+                    <h1>HOME</h1>
                 </Link>
 
-                <Link to={"/search/cat"}>
-                    Cats
-                </Link>
+                <Route component={Home}
+                    path={"/"} />
 
-                <Link to={"/search/dog"}>
-                    Dogs
-                </Link>
-
-            <Route component={ListOfGifs}
-            path={"/search/:search"}/>
+                <Route component={ListOfGifs}
+                    path={"/search/:search"} />
 
             </section>
         </div>

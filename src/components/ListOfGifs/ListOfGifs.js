@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Gif from "./Gif";
-import getGifs from "../service/getGifs";
+import Gif from "../Gif/Gif";
+import getGifs from "../../service/getGifs";
 import "./ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
