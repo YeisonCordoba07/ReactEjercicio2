@@ -1,14 +1,13 @@
 import { Link, useLocation } from "wouter";
-import { useState, useEffect } from "react";
-import getGifs from "../../service/getGifs";
+import { useState } from "react";
 import ListOfGifs from "../../components/ListOfGifs/ListOfGifs";
+import { useGifs } from "../../hook/useGifs";
 
 export default function Home() {
-    const [search, setKeyword] = useState("");
+    const [search, setSearch] = useState("");
     const [path, setPath] = useLocation();
-    const [gifs, setGifs] = useState([]);
-    const [loading, setLoading] = useState(false);
 
+    const {gifs} = useGifs();
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -16,21 +15,11 @@ export default function Home() {
         console.log(search);
     };
 
+
     const handleChange = (e) => { 
-        setKeyword(e.target.value);
+        setSearch(e.target.value);
     };
 
-
-
-    useEffect(function(){
-
-        setLoading(true);
-
-        getGifs().then(gif =>{
-            setGifs(gif);
-            setLoading(false);
-        })
-    }, [search]);
 
     return (
         <>
@@ -41,13 +30,12 @@ export default function Home() {
                 onChange={handleChange}
                 />
             </form>
+
             <Link to={"/search/panda"}>Pandas</Link>
-
             <Link to={"/search/cat"}>Cats</Link>
-
             <Link to={"/search/dog"}>Dogs</Link>
 
-            <ListOfGifs params={gifs}/>
+            <ListOfGifs gifs={gifs}/>
         </>
     );
 }
