@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Gif from "../Gif/Gif";
-import getGifs from "../../service/getGifs";
 import "./ListOfGifs.css";
 
 import { useGifs } from "../../hook/useGifs";
 
-export default function ListOfGifs({ params }) {
+function ListOfGifs({ params }) {
 
     const { search } = params;
     const {loading, gifs} = useGifs({search});
+    console.log("ListOfGifs");
 
     if(loading){
         return(
@@ -33,3 +33,5 @@ export default function ListOfGifs({ params }) {
         </div>
     );
 }
+
+export default React.memo(ListOfGifs);

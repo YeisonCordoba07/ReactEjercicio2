@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import getGifs from "../service/getGifs";
 
-export function useGifs({search}){
+export function useGifs({search}= {search: null}){
     const [gifs, setGifs] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -9,9 +9,11 @@ export function useGifs({search}){
     useEffect(
         function () {
             setLoading(true);
-            getGifs(search).then((gif) => {
+            const auxSearch = search || localStorage.getItem("lastSearch");
+            getGifs({search: auxSearch}).then((gif) => {
                 setGifs(gif);
                 setLoading(false);
+                localStorage.setItem("lastSearch", search);
             });
         },
         [search]
