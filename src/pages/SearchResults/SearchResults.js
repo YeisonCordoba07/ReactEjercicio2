@@ -6,9 +6,11 @@ export default function SearchResults({ params }) {
   const { search } = params;
   const { loading, gifs } = useGifs({ search });
   console.log("ListOfGifs");
+
   return (
     <>
-      {loading ? (
+      {loading ? 
+      (
         <div>
           <p>Loading ...</p>
         </div>

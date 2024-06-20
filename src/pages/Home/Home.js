@@ -9,12 +9,12 @@ export default function Home() {
 
     const {gifs} = useGifs();
 
+    
     const handleSubmit = (e) => {
         e.preventDefault(); 
         setPath(`/search/${search}`);
         console.log(search);
     };
-
 
     const handleChange = (e) => { 
         setSearch(e.target.value);

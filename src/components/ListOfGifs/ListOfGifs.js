@@ -7,13 +7,13 @@ export default function ListOfGifs({ gifs }) {
 
     return (
         <div className="listOfGifs">
-            {gifs.map((i) => {
+            {gifs.map((gif) => {
                 return (
                     <Gif
-                        key={i.id}
-                        title={i.title}
-                        id={i.id}
-                        url={i.images.fixed_width_small.url}
+                        key={gif.id}
+                        title={gif.title}
+                        id={gif.id}
+                        url={gif.images.fixed_width_small.url}
                     />
                 );
             })}
