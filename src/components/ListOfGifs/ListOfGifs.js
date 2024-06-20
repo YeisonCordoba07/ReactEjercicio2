@@ -5,7 +5,7 @@ import "./ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
     const [gifs, setGifs] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const { search } = params;
 
     useEffect(
