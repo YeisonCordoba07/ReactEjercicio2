@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import getGifs from "../service/getGifs";
 import { GifsContext } from "../context/GifsContext";
 
-export function useGifs({ search } = { search: null }) {
+export function useGifs({ search } = { search: "Simpsons" }) {
     const {gifs, setGifs} = useContext(GifsContext);
     const [loading, setLoading] = useState(false);
 
