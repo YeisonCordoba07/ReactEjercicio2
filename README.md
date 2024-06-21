@@ -1,6 +1,7 @@
 # Resultado
 
-![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/334a8d9f-6cdb-45c7-84f5-8c7ac6af1cac)
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/c8ed2aa9-89e8-41d7-a864-e0101a49f291)
+
 
 -----
 
