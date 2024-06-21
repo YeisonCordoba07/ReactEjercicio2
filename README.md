@@ -7,6 +7,10 @@
 ## Cuando se busca un gif:
 ![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/1b036a70-fe5f-4ad7-9d2f-c5878cd248cd)
 
+## Cuando se le da click a un gif:
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/9952d5dd-9607-4fdc-a119-0dd636eda975)
+
+
 
 
 
