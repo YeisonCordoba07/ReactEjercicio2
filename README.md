@@ -1,6 +1,10 @@
 # Resultado
 
-![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/c8ed2aa9-89e8-41d7-a864-e0101a49f291)
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/23d5ffc7-a8e8-48b5-bc44-f1b1cd2af0a7)
+
+
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/d575a780-b13b-4d76-bbbd-2ee4abe8fa0c)
+
 
 
 -----
