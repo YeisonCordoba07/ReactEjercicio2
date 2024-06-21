@@ -1,9 +1,12 @@
 # Resultado
 
+## Pagina de inicio por defecto:
 ![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/23d5ffc7-a8e8-48b5-bc44-f1b1cd2af0a7)
 
 
-![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/d575a780-b13b-4d76-bbbd-2ee4abe8fa0c)
+## Cuando se busca un gif:
+![image](https://github.com/YeisonCordoba07/ReactEjercicio2/assets/41711172/1b036a70-fe5f-4ad7-9d2f-c5878cd248cd)
+
 
 
 
